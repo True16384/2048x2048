@@ -222,7 +222,7 @@ GameManager.prototype.buildTraversals = function (vector) {
 
   return traversals;
 };
-
+// @ack
 GameManager.prototype.findFarthestPosition = function (cell, vector) {
   var previous;
 

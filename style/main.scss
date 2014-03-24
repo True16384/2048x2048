@@ -3,7 +3,8 @@
 
 $field-width: 500px;
 $grid-spacing: 15px;
-$grid-row-cells: 4;
+$grid-row-cells: 6;
+$font-coef: 4 / 6;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
 $tile-border-radius: 3px;
 
@@ -46,7 +47,13 @@ h1.title {
   display: block;
   float: left;
 }
-
+.chut {
+  font-size: 30%;
+  margin-top:-20px;
+}
+.fyeo {
+  font-size: 70%;
+}
 @include keyframes(move-up) {
   0% {
     top: 25px;
@@ -136,8 +143,8 @@ strong {
 hr {
   border: none;
   border-bottom: 1px solid lighten($text-color, 40%);
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .container {
@@ -322,7 +329,7 @@ hr {
     font-weight: bold;
     z-index: 10;
 
-    font-size: 55px;
+    font-size: $font-coef * 55px;
   }
 
   // Movement transition
@@ -383,17 +390,17 @@ hr {
 
       // Adjust font size for bigger numbers
       @if $power >= 100 and $power < 1000 {
-        font-size: 45px;
+        font-size: $font-coef * 45px;
 
         // Media queries placed here to avoid carrying over the rest of the logic
         @include smaller($mobile-threshold) {
-          font-size: 25px;
+          font-size: $font-coef * 25px;
         }
       } @else if $power >= 1000 {
-        font-size: 35px;
+        font-size: $font-coef * 35px;
 
         @include smaller($mobile-threshold) {
-          font-size: 15px;
+          font-size: $font-coef * 15px;
         }
       }
     }
@@ -406,10 +413,10 @@ hr {
     color: $bright-text-color;
     background: mix(#333, $tile-gold-color, 95%);
 
-    font-size: 30px;
+    font-size: $font-coef * 30px;
 
     @include smaller($mobile-threshold) {
-      font-size: 10px;
+      font-size: $font-coef * 10px;
     }
   }
 }
@@ -531,7 +538,7 @@ hr {
 
   // Rest of the font-size adjustments in the tile class
   .tile .tile-inner {
-    font-size: 35px;
+    font-size: $font-coef * 35px;
   }
 
   .game-message {

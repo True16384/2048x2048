@@ -474,6 +474,9 @@ hr {
   text-align: center;
   float: right;
 }
+.game-info {
+  text-align: justify;
+}
 
 .game-explanation {
   margin-top: 50px;
@@ -483,7 +486,7 @@ hr {
   // Redefine variables for smaller screens
   $field-width: 280px;
   $grid-spacing: 10px;
-  $grid-row-cells: 4;
+  $grid-row-cells: 6;
   $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
   $tile-border-radius: 3px;
   $game-container-margin-top: 17px;
@@ -501,7 +504,10 @@ hr {
     font-size: 27px;
     margin-top: 15px;
   }
-
+  .chut {
+    font-size: 42%;
+    margin-top:-2px;
+  }
   .container {
     width: $field-width;
     margin: 0 auto;

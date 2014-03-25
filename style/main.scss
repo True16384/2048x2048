@@ -508,6 +508,9 @@ hr {
     font-size: 42%;
     margin-top:-2px;
   }
+  .hide-mobile {
+    display: none;
+  }
   .container {
     width: $field-width;
     margin: 0 auto;
